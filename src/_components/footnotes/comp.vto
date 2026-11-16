@@ -1,0 +1,11 @@
+<section class="footnotes">
+	<h2 class="footnotes__header">Footnotes</h2>
+	<ol>
+		{{ for note of footnotes }}
+			<li id="{{ note.id }}">
+				<a href="#{{ refId }}" class="footnote-backref">^</a>
+				{{ note.content }}
+			</li>
+		{{ /for }}
+	</ol>
+</section>

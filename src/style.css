@@ -1,0 +1,293 @@
+/* Vale's CSS Reset https://vale.rocks/posts/css-reset */
+@layer {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		background-repeat: no-repeat;
+	}
+
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	html {
+		-webkit-text-size-adjust: none;
+		text-size-adjust: none;
+		block-size: 100%;
+	}
+
+	body {
+		min-block-size: 100%;
+	}
+
+	img,
+	iframe,
+	audio,
+	video,
+	canvas {
+		display: block;
+		max-inline-size: 100%;
+		block-size: auto;
+	}
+
+	svg {
+		max-inline-size: 100%;
+	}
+
+	svg:not([fill]) {
+		fill: currentColor;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	fieldset,
+	iframe {
+		border: none;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
+
+	p {
+		text-wrap: pretty;
+		font-variant-numeric: proportional-nums;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-variant-numeric: lining-nums;
+	}
+
+	p,
+	blockquote,
+	q,
+	figcaption,
+	li {
+		hanging-punctuation: first allow-end last;
+	}
+
+	input,
+	label,
+	button,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 1.1;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	math,
+	time,
+	table {
+		font-variant-numeric: tabular-nums lining-nums slashed-zero;
+	}
+
+	code {
+		font-variant-numeric: slashed-zero;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
+
+	abbr {
+		font-variant-caps: all-small-caps;
+		text-decoration: none;
+
+		&[title] {
+			cursor: help;
+			text-decoration: underline dotted;
+		}
+	}
+
+	sup,
+	sub {
+		line-height: 0;
+	}
+
+	summary {
+		cursor: pointer;
+	}
+
+	:disabled {
+		opacity: 0.8;
+		cursor: not-allowed;
+	}
+
+	:focus-visible {
+		outline-offset: 0.2rem;
+	}
+}
+/* end reset */
+
+body {
+	padding: 2rem;
+	padding-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	/* typography */
+	font-size: 1rem;
+	font-family: sans-serif;
+	line-height: 1.65;
+}
+
+.layout-wrapper {
+	max-width: 60ch;
+	width: 100%;
+}
+
+p {
+	margin: 0.5em 0 1em 0;
+}
+
+a {
+	color: #3056a9;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:visited {
+		color: #6a60b0;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: serif;
+	color: var(--color-emphasized, #101418);
+	font-weight: bold;
+	margin: 0;
+	padding-top: 0.5em;
+	display: flow-root;
+	word-break: break-word;
+}
+
+h1, h2 {
+	margin: 0.25em 0 0.25em 0;
+	border-bottom: 1px solid var(--border-color-base, #a2a9b1);
+	font-weight: normal;
+	line-height: 1.375;
+}
+
+h1 {
+	font-size: 1.8em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+ol {
+	margin-top: 0.3em;
+	margin-bottom: 0;
+	margin-left: 3.2em;
+	margin-right: 0;
+	margin-inline-start: 3.2em;
+	margin-inline-end: 0;
+	padding: 0;
+	list-style-image: none;
+}
+
+ul {
+	margin-top: 0.3em;
+	margin-bottom: 0;
+	margin-left: 1.6em;
+	margin-right: 0;
+	margin-inline-start: 1.6em;
+	margin-inline-end: 0;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 0.1em;
+}
+
+hr {
+	border: none;
+	position: relative;
+	height: 1px;
+	overflow: visible;
+	margin: -0.5em 0 2em 0;
+
+	&::after {
+		content: "---";
+		position: absolute;
+		inset: 0;
+		place-self: center;
+	}
+}
+
+.post__metadata {
+	font-size: 90%;
+	margin: 0;
+	margin-bottom: 1em;
+	list-style-type: none;
+	line-height: 1.4;
+	display: flex;
+
+	& li:not(:last-child)::after {
+		white-space-collapse: preserve;
+		content: " — ";
+	}
+}
+
+.post__description {
+	font-family: serif;
+	color: #333;
+}
+
+.intro::after {
+	content: "---";
+	display: block;
+	color: #666;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.posts-list {
+	list-style-type: none;
+	margin: 0;
+	font-size: 95%;
+}
+
+.site-header {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.word-length {
+	color: #666;
+}

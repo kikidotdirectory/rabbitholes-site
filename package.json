@@ -1,0 +1,22 @@
+{
+	"name": "rabbitholes",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"serve": "lume build -s",
+		"build": "lume build"
+	},
+	"dependencies": {
+		"@lumeland/core": "^1.0.4",
+		"@lumeland/lume": "^4.0.2",
+		"@lumeland/plugin-date": "^1.0.0",
+		"@lumeland/plugin-markdown-footnotes": "^1.0.1",
+		"@lumeland/ssx": "^0.1.16",
+		"markdown-it-footnote": "^4.0.0"
+	},
+	"allowScripts": {
+		"esbuild": false,
+		"fsevents": false,
+		"@parcel/watcher": false
+	}
+}

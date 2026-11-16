@@ -1,0 +1,22 @@
+---
+layout: layouts/base.vto
+---
+
+<section class="intro">
+	{{ content }}
+</section>
+
+<section>
+	<ul class="posts-list">
+		{{ for page of search.pages("post") }}
+			<li>
+				<time datetime="{{ page.date }}">
+					{{ page.date |> date("HUMAN_SHORT_DATE") }}
+				</time> —
+				<a href="{{ page.url }}">
+					{{ page.title }}
+				</a>
+			</li>
+		{{ /for }}
+	</ul>
+</section>

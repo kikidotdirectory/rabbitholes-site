@@ -1,0 +1,12 @@
+.footnotes {
+	margin-top: 3em;
+	font-size: 90%;
+}
+
+.footnote-backref {
+	font-weight: bold;
+}
+
+.footnote-backref ~ p {
+	display: inline;
+}

@@ -11,13 +11,15 @@ layout: layouts/base.vto
 					|> date("HUMAN_SHORT_DATE")
 				}}</time>
 			</li>
-			<li><a href="{{ link }}">{{ title }}</a> <span class="word-length">({{ word_length }} words)</span></li>
+			<li>
+				<a href="{{ link }}">{{ title }}</a> <span class="word-length"
+				>({{ word_length }} words)</span>
+			</li>
 		</ul>
 	</header>
-	<img
-		src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Karczmiska%2C_spichrz_obecnie_budynek_Urz%C4%99du_Gminy1.jpg/960px-Karczmiska%2C_spichrz_obecnie_budynek_Urz%C4%99du_Gminy1.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail"
-		alt="Karczmiska, Gmina Karczmiska"
-	>
+	{{ if img_src }}
+		<img src="{{ img_src }}" alt="{{ img_alt }}">
+	{{ /if }}
 	<h1>{{ title }}</h1>
 	<p class="post__description">{{ desc }}</p>
 

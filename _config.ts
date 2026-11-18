@@ -9,6 +9,7 @@ import markdownItWikilinks from "markdown-it-wikilinks";
 const markdown = {
 	"options": {
 		typographer: true,
+		linkify: true,
 	},
 	plugins: [markdownItWikilinks({
 		baseURL: "/articles/",

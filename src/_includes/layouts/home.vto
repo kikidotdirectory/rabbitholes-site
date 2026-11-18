@@ -10,7 +10,7 @@ layout: layouts/base.vto
 	<ul class="posts-list">
 		{{ for page of search.pages("post").reverse() }}
 			<li>
-				<time datetime="{{ page.date }}">
+				<time datetime="{{ page.date |> date('DATE') }}">
 					{{ page.date |> date("HUMAN_SHORT_DATE") }}
 				</time> —
 				<a href="{{ page.url }}">

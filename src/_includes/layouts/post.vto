@@ -6,7 +6,7 @@ layout: layouts/base.vto
 	<header>
 		<ul class="post__metadata">
 			<li>
-				<time datetime="{{ date }}">{{
+				<time datetime="{{ date |> date('DATE') }}">{{
 					date
 					|> date("HUMAN_SHORT_DATE")
 				}}</time>

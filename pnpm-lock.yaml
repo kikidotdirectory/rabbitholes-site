@@ -29,6 +29,10 @@ importers:
       markdown-it-wikilinks:
         specifier: ^1.4.0
         version: 1.4.0
+    devDependencies:
+      '@types/node':
+        specifier: ^26.6.6
+        version: 26.6.6
 
 packages:
 
@@ -269,6 +273,9 @@ packages:
   '@lumeland/ssx@0.1.16':
     resolution: {integrity: sha512-zk22w7DxAXWd/LyUJ8Hh26/JHduOz/+lEIFJ/5YwZUb6qVLyPVtSEsj0DpBizHXw2ryLtBniIEnjPiJRreEENg==}
 
+  '@types/node@26.6.6':
+    resolution: {integrity: sha512-MzQj+8Kx3XI40OmUAE6Qoh58ZMNstNNMwn2nfd3qWsfe7nDNSqJNzes4njhz6AHwrSHOffSLwXU6yb474Q4aog==}
+
   argparse@3.0.4:
     resolution: {integrity: sha512-fwWK3Zq22l4XJJjx5mcBHGikIk+hJqO+32dPm0Jur7+rtG5x1scOjSfdT9ZKeWHPpsya/l0HHK4tDImBkTrtvA==}
 
@@ -367,6 +374,9 @@ packages:
 
   uc.micro@3.0.0:
     resolution: {integrity: sha512-U3PppEkleoTnIfi8BozMx3yju3qc/L6SwqWo2Sw+54PX+PX0q9I+r1Um5HCmqD7n9VDX5/v3vQH/AjA6deDdtw==}
+
+  undici-types@8.9.0:
+    resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
 
   utf8-byte-length@1.0.5:
     resolution: {integrity: sha512-Xn0w3MtiQ6zoz2vFyUVruaCL53O/DwUvkEeOvj+uulMm0BkUGYWmBYVyElqZaSLhY6ZD0ulfU3aBra2aVT4xfA==}
@@ -561,6 +571,10 @@ snapshots:
 
   '@lumeland/ssx@0.1.16': {}
 
+  '@types/node@26.6.6':
+    dependencies:
+      undici-types: 8.9.0
+
   argparse@3.0.4: {}
 
   cac@7.1.0: {}
@@ -675,6 +689,8 @@ snapshots:
       fsevents: 2.3.3
 
   uc.micro@3.0.0: {}
+
+  undici-types@8.9.0: {}
 
   utf8-byte-length@1.0.5: {}
 

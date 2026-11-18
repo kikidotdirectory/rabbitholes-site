@@ -19,5 +19,8 @@
 		"esbuild": false,
 		"fsevents": false,
 		"@parcel/watcher": false
+	},
+	"devDependencies": {
+		"@types/node": "^26.6.6"
 	}
 }
